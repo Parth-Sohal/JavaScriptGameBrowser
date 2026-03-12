@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.score-div {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.player-1_score,
+.player-2_score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.player-1_score {
+  color: #ff5252; /* Red for player 1 */
+}
+
+.player-2_score {
+  color: #4285f4; /* Blue for player 2 */
+}
+
+.main-div {
+  position: relative;
+  height: 300px;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 100% 30px;
+}
+
+.car-1,
+.car-2 {
+  position: absolute;
+  bottom: 30px;
+  width: 100px;
+  height: 60px;
+  transition: left 0.3s ease;
+  cursor: pointer;
+}
+
+.car-1 {
+  left: 20px;
+}
+
+.car-2 {
+  left: 20px;
+  bottom: 120px;
+}
+
+.car-1:hover,
+.car-2:hover {
+  left: 30px;
+}
+/* .car-1:hover{
+ 
+} */
+.car-1 img,
+.car-2 img {
+  transform: scaleX(-1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.finish-line {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #000;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
