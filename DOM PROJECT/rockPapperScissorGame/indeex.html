@@ -3,83 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors Pro</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Scoreboard -->
-    <div class="scoreboard-box">
-      <div class="score-entry">
-        <h3>PLAYER</h3>
-        <p id="p1-score">0</p>
-      </div>
-      <div class="score-entry">
-        <h3>COMPUTER</h3>
-        <p id="p2-score">0</p>
-      </div>
-    </div>
-
-    <!-- Game Panel -->
-    <div class="box-2">
-      <!-- Player Section -->
-      <div class="box-i">
-        <img src="rock.jpeg" alt="Rock" loading="lazy" class="images rock-1" />
-        <div class="data-1">
-          <div class="data-i">
-            <img
-              src="scissor.jpeg"
-              alt="Scissors"
-              loading="lazy"
-              class="images scissor-1"
-            />
-          </div>
-          <div class="data-ii">
-            <img
-              src="papeer.png"
-              alt="Paper"
-              class="images player-1Chose hidden"
-            />
-          </div>
+    <div class="game-container">
+      <header>
+        <h1>ROCK PAPER SCISSORS</h1>
+      </header>
+      
+      <!-- Scoreboard -->
+      <div class="scoreboard-box">
+        <div class="score-entry player-score-box">
+          <h3>PLAYER</h3>
+          <p id="p1-score">0</p>
         </div>
-        <img
-          src="papeer.png"
-          alt="Paper"
-          loading="lazy"
-          class="images paper-1"
-        />
+        <div class="score-entry computer-score-box">
+          <h3>COMPUTER</h3>
+          <p id="p2-score">0</p>
+        </div>
       </div>
 
-      <!-- Computer Section -->
-      <div class="box-ii">
-        <img
-          src="rock.jpeg"
-          alt="Rock"
-          loading="lazy"
-          class="images mirrored"
-        />
-        <div class="data-2">
-          <div class="data-i">
-            <img
-              src="papeer.png"
-              alt="Scissors"
-              loading="lazy"
-              class="images mirrored hidden compuetrChoose-2"
-            />
-          </div>
-          <div class="data-ii">
-            <img src="scissor.jpeg" alt="Paper" class="images mirrored" />
+      <!-- Game Arena -->
+      <div class="arena">
+        <div class="arena-side player-side">
+          <h2 class="side-label">You</h2>
+          <div class="choice-display player-choice-display">
+            <!-- Will show rock.jpeg by default when shaking -->
+            <img src="rock.jpeg" alt="Player Choice" class="images chosen-img player-chosen hidden" />
+            <div class="placeholder glow-player">?</div>
+            <div class="result-text player-result-text"></div>
           </div>
         </div>
-        <img
-          src="papeer.png"
-          alt="Paper"
-          loading="lazy"
-          class="images mirrored"
-        />
+
+        <div class="vs-badge">VS</div>
+
+        <div class="arena-side computer-side">
+          <h2 class="side-label">Computer</h2>
+          <div class="choice-display computer-choice-display">
+            <!-- Will show rock.jpeg by default when shaking -->
+            <img src="rock.jpeg" alt="Computer Choice" class="images chosen-img computer-chosen mirrored hidden" />
+            <div class="placeholder glow-comp">?</div>
+            <div class="result-text computer-result-text"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="status-message" id="status">Choose your weapon!</div>
+
+      <!-- Player Controls -->
+      <div class="controls">
+        <button class="choice-btn" data-choice="rock">
+          <img src="rock.jpeg" alt="Rock" class="images" />
+          <span>Rock</span>
+        </button>
+        <button class="choice-btn" data-choice="paper">
+          <img src="papeer.png" alt="Paper" class="images" />
+          <span>Paper</span>
+        </button>
+        <button class="choice-btn" data-choice="scissor">
+          <img src="scissor.jpeg" alt="Scissors" class="images" />
+          <span>Scissors</span>
+        </button>
       </div>
     </div>
-    <script src="script.js">
-      // asdfghj
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

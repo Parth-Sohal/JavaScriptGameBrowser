@@ -3,44 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Racing Game</title>
+    <title>Neon Drift Racing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <div class="score-div">
-        <div class="player-1_score1">
-          Player 1:
-          <span class="player-1_score">0</span>
-        </div>
-
-        <div class="player-2_score2">
-          Player 2:
-          <span class="player-2_score">0</span>
-        </div>
+    <div class="game-container">
+      <!-- Overlay for Start/Winner -->
+      <div class="overlay" id="overlay">
+        <h1 id="overlay-title">NEON DRIFT</h1>
+        <p id="overlay-subtitle">P1: 'W' key &nbsp;|&nbsp; P2: 'Up Arrow'</p>
+        <button id="start-btn">START RACE</button>
+        <button id="play-again-btn" class="hidden">PLAY AGAIN</button>
       </div>
 
-      <div class="main-div">
-        <div class="finish-line"></div>
-        <div class="car-1">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
-            alt="Red Car"
-          />
+      <div id="countdown" class="hidden">3</div>
+
+      <!-- Score Board -->
+      <header class="score-board">
+        <div class="player-card p1">
+          <div class="player-name">PLAYER 1</div>
+          <div class="score"><span class="player-1_score">0</span> MPH</div>
         </div>
-        <div class="car-2">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
-            alt="Blue Car"
-          />
+        <div class="status-center">
+          <div id="status-text">WAITING...</div>
         </div>
-      </div>
+        <div class="player-card p2">
+          <div class="player-name">PLAYER 2</div>
+          <div class="score"><span class="player-2_score">0</span> MPH</div>
+        </div>
+      </header>
 
-      <button id="race-btn">Click to Race!</button>
-
-      <button class="Play-again">Play Agian</button>
-    </main>
-
+      <!-- Track -->
+      <main class="track-area">
+        <div class="track">
+          <div class="start-line"></div>
+          <div class="finish-line"></div>
+          <div class="lane-divider divider-1"></div>
+          
+          <div class="car-wrapper car-1-wrapper" id="car1">
+            <div class="exhaust"></div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+              alt="Red Car"
+              class="car-img"
+            />
+          </div>
+          
+          <div class="car-wrapper car-2-wrapper" id="car2">
+            <div class="exhaust"></div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+              alt="Blue Car"
+              class="car-img"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
