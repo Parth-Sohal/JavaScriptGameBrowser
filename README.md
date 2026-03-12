@@ -43,4 +43,3 @@ A simple racing-style game where the player controls a car to reach the finish l
 
 ---
 
-## 📂 Project Structure
